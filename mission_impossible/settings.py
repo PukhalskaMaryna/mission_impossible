@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users_app',
 ]
 
 MIDDLEWARE = [
@@ -75,7 +76,7 @@ WSGI_APPLICATION = 'mission_impossible.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mission_db',
+        'NAME': 'second_db',
         'USER': 'mission_user',
         'PASSWORD': 'MySecretPassword123',
         'HOST': 'localhost',
@@ -125,3 +126,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'users_app.ToDoUser'
